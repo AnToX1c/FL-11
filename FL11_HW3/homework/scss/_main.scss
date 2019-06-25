@@ -1,5 +1,18 @@
+$colors: (
+  bodyBackground: $bodyBackgroundColor,
+  underline: $underlineColor,
+  textColor: #b6c3ce
+);
+
+@mixin pseudoBefore {
+  position: absolute;
+  content: '';
+  display: block;
+  z-index: -1;
+}
+
 body {
-  background-color: $bodyBackgroundColor;
+  background-color: map-get($colors, bodyBackground);
   max-width: 1920px;
   margin: 0 auto;
   font-family: 'Source Sans Pro', sans-serif;
@@ -31,26 +44,7 @@ button {
   color: $headerFontColor;
   border-radius: 0 0 800px/400px 0;
 
-  img {
-    height: 55px;
-    width: 55px;  
-  }
-  .landing-logo p {
-    display: inline-block;
-    margin: 0;
-    font-family: $font;
-    font-size: 30px;
-    font-weight: bolder;
-
-    span {
-      // display: block;
-      // display: flex;
-      font-size: 13px;
-      font-weight: bolder;
-    }
-  }
-
-  .header_heading {
+  &_heading {
     position: relative;
     width: 50%;
     font-size: 90px;
@@ -60,21 +54,43 @@ button {
     z-index: 0;
 
     &::before {
-      position: absolute;
-      content: '';
-      display: block;
+      @include pseudoBefore;
       width: 349px;
-      outline: 15px solid #14a0c7;
+      outline: 15px solid map-get($colors, underline);
       top: 171px;
       left: 15px;
-      z-index: -1;
     }
   }
-  .header_text {
+  &_text {
     font-size: 20px;
     font-family: $font;
     white-space: pre-line;
     margin-bottom: 70px;
+  }
+}
+
+.header-wrap {
+  .landing-logo {
+    img {
+      height: 55px;
+      width: 55px;  
+    }
+    p {
+      display: inline-block;
+      margin: 0 0 0 15px;
+      font-family: $font;
+      font-size: 30px;
+      font-weight: bolder;
+      line-height: 24px;
+      padding-top: 10px;
+      vertical-align: top;
+
+      span {
+        display: block;
+        font-size: 13px;
+        text-align: center;
+      }
+    }
   }
 }
 
@@ -86,15 +102,11 @@ button {
   position: relative;
 
   &::before {
-    position: absolute;
-    content: '';
-    display: block;
+    @include pseudoBefore;
     width: 220px;
-    // margin: 0 auto;
-    outline: 8px solid $underlineColor;
+    outline: 8px solid map-get($colors, underline);
     top: 47px;
     left: 975px;
-    z-index: -1;
   }
 }
 .section_card_wrap {
@@ -117,7 +129,6 @@ button {
   .section_card_heading {
     display: inline-block;
     margin: 15px 0;
-    // width: max-content;
     font-size: 30px;
     font-weight: 600;
 
@@ -126,7 +137,7 @@ button {
       display: block;
       width: inherit;
       height: 15px;
-      background-color: $underlineColor;
+      background-color: map-get($colors, underline);
       margin-top: -15px;
     }
   }
@@ -135,10 +146,9 @@ button {
   margin: 0;
   font-family: $font;
   font-size: 20px;
-  font-weight: 500;
-  color: #b6c3ce;
+  font-weight: 300;
+  color: map-get($colors, textColor);
   line-height: 1.5;
-  
 }
 
 .section_banner {
@@ -153,7 +163,7 @@ button {
   background: linear-gradient(to right, $gradientColorStart, $gradientColorEnd);
   border-radius: 10px;
 
-  .section_banner_heading {
+  &_heading {
     position: relative;
     margin: 0;
     font-size: 40px;
@@ -162,51 +172,33 @@ button {
     z-index: 0;
 
     &::before {
-      position: absolute;
-      content: '';
-      display: block;
+      @include pseudoBefore;
       width: 69px;
-      outline: 8px solid $underlineColor;
+      outline: 8px solid map-get($colors, underline);
       top: 36px;
       left: 168px;
-      z-index: -1;
     }
   }
 
-  .section_banner_text {
+  &_text {
     font-size: 20px;
-    color: #b6c3ce;
+    color: map-get($colors, textColor);
     margin-bottom: 20px;
   }
 }
 
 .footer {
   background-color: $footerBackgroundColor;
-  color: #b6c3ce;
+  color: map-get($colors, textColor);
 }
 .footer-wrap {
+  @extend .header-wrap;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding-top: 150px;
   padding-bottom: 30px;
 
-  img {
-    height: 55px;
-    width: 55px;  
-  }
-  .landing-logo p {
-    display: inline-block;
-    margin: 0;
-    font-family: $font;
-    font-size: 30px;
-    font-weight: bolder;
-
-    span {
-      font-size: 13px;
-      font-weight: bolder;
-    }
-  }
   .footer_text {
     font-family: $font;
     font-size: 18px;

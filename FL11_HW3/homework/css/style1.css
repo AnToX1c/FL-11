@@ -27,19 +27,7 @@ button {
   padding: 25px 190px;
   color: #2c2f3c;
   border-radius: 0 0 800px/400px 0; }
-  .header img {
-    height: 55px;
-    width: 55px; }
-  .header .landing-logo p {
-    display: inline-block;
-    margin: 0;
-    font-family: "Hind", sans-serif;
-    font-size: 30px;
-    font-weight: bolder; }
-    .header .landing-logo p span {
-      font-size: 13px;
-      font-weight: bolder; }
-  .header .header_heading {
+  .header_heading {
     position: relative;
     width: 50%;
     font-size: 90px;
@@ -47,20 +35,37 @@ button {
     line-height: 95px;
     margin-bottom: 40px;
     z-index: 0; }
-    .header .header_heading::before {
+    .header_heading::before {
       position: absolute;
       content: '';
       display: block;
+      z-index: -1;
       width: 349px;
       outline: 15px solid #14a0c7;
       top: 171px;
-      left: 15px;
-      z-index: -1; }
-  .header .header_text {
+      left: 15px; }
+  .header_text {
     font-size: 20px;
     font-family: "Hind", sans-serif;
     white-space: pre-line;
     margin-bottom: 70px; }
+
+.header-wrap .landing-logo img, .footer-wrap .landing-logo img {
+  height: 55px;
+  width: 55px; }
+.header-wrap .landing-logo p, .footer-wrap .landing-logo p {
+  display: inline-block;
+  margin: 0 0 0 15px;
+  font-family: "Hind", sans-serif;
+  font-size: 30px;
+  font-weight: bolder;
+  line-height: 24px;
+  padding-top: 10px;
+  vertical-align: top; }
+  .header-wrap .landing-logo p span, .footer-wrap .landing-logo p span {
+    display: block;
+    font-size: 13px;
+    text-align: center; }
 
 .section_text {
   color: #2c2f3c;
@@ -72,11 +77,11 @@ button {
     position: absolute;
     content: '';
     display: block;
+    z-index: -1;
     width: 220px;
     outline: 8px solid #14a0c7;
     top: 47px;
-    left: 975px;
-    z-index: -1; }
+    left: 975px; }
 
 .section_card_wrap {
   display: flex;
@@ -110,7 +115,7 @@ button {
   margin: 0;
   font-family: "Hind", sans-serif;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 300;
   color: #b6c3ce;
   line-height: 1.5; }
 
@@ -125,23 +130,23 @@ button {
   align-items: center;
   background: linear-gradient(to right, #659510, #2f5dd3);
   border-radius: 10px; }
-  .section_banner .section_banner_heading {
+  .section_banner_heading {
     position: relative;
     margin: 0;
     font-size: 40px;
     font-weight: bolder;
     color: #2c2f3c;
     z-index: 0; }
-    .section_banner .section_banner_heading::before {
+    .section_banner_heading::before {
       position: absolute;
       content: '';
       display: block;
+      z-index: -1;
       width: 69px;
       outline: 8px solid #14a0c7;
       top: 36px;
-      left: 168px;
-      z-index: -1; }
-  .section_banner .section_banner_text {
+      left: 168px; }
+  .section_banner_text {
     font-size: 20px;
     color: #b6c3ce;
     margin-bottom: 20px; }
@@ -156,18 +161,6 @@ button {
   align-items: center;
   padding-top: 150px;
   padding-bottom: 30px; }
-  .footer-wrap img {
-    height: 55px;
-    width: 55px; }
-  .footer-wrap .landing-logo p {
-    display: inline-block;
-    margin: 0;
-    font-family: "Hind", sans-serif;
-    font-size: 30px;
-    font-weight: bolder; }
-    .footer-wrap .landing-logo p span {
-      font-size: 13px;
-      font-weight: bolder; }
   .footer-wrap .footer_text {
     font-family: "Hind", sans-serif;
     font-size: 18px;

@@ -111,7 +111,8 @@ button {
   z-index: 1;
   padding-left: 1%;
   padding-right: 4%;
-  padding-bottom: 8%;
+  padding-bottom: 11vw;
+  line-height: 1.6vw;
 }
 .section_title {
   margin: 0;
@@ -140,7 +141,6 @@ button {
 }
 .section_img img {
   width: 100%;
-  box-shadow: inset 5px 0px 5px black;
 }
 .explore {
   position: absolute;
@@ -210,8 +210,10 @@ button {
 }
 .news_button {
   background-color: #097774;
-  padding: 1rem 7rem;
+  padding: 1rem 0;
   margin: 0 auto 2.3rem auto;
+  width: 27vw;
+  min-width: 200px;
   text-align: center;
   font-size: 0.95rem;
 }

@@ -60,6 +60,7 @@ a {
 }
 .menu a:hover {
   background-color: #b8b8b8;
+  transition: background-color 0.8s linear;
 }
 .main {
   display: grid;
@@ -78,6 +79,7 @@ img {
 .post:hover .post_text-wrap {
   opacity: 0.5;
   cursor: pointer;
+  transition: opacity 0.4s linear;
 }
 .post-1 {
 	background: #B71757;

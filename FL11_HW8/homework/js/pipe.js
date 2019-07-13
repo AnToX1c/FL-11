@@ -1,5 +1,5 @@
 function addOne(x) {
-  return x + 3;
+  return x + 1;
 }
 const pipe = function() {
   const [a, ...otherArgs] = arguments;

@@ -7,7 +7,34 @@
   <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <h1>TODO Cat List</h1>
+    <div class="add-input-wrapper">
+      <input class="add-input" type="text" placeholder="Add new action" autofocus></input>
+      <i class="material-icons add-box">add_box</i>
+    </div>
+    <hr>
+    <ul class="list">
+      <li class="list-item" draggable="true">
+        <i class="material-icons checkbox">check_box_outline_blank</i>
+        <p>Find the cat</p>
+        <i class="material-icons edit-icon">create</i>
+        <i class="material-icons delete-icon">delete</i>
+      </li>
+      <li class="list-item" draggable="true">
+        <i class="material-icons checkbox">check_box_outline_blank</i>
+        <p>Prepare cat's carry</p>
+        <i class="material-icons edit-icon">create</i>
+        <i class="material-icons delete-icon">delete</i>
+      </li>
+      <li class="list-item" draggable="true">
+        <i class="material-icons checkbox">check_box_outline_blank</i>
+        <p>Bathe a cat</p>
+        <i class="material-icons edit-icon">create</i>
+        <i class="material-icons delete-icon">delete</i>
+      </li>
+    </ul>
+  </div>
 
   <script src="./src/app.js"></script>
 </body>

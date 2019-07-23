@@ -1,2 +1,88 @@
-/* Your styles goes here */
-
+body {
+  color: #38b1fe;
+}
+#root {
+  padding: 0 2vw;
+}
+.material-icons:hover {
+  cursor: pointer;
+  color: grey;
+}
+h1 {
+  text-align: center;
+}
+.warning-message {
+  width: 20vw;
+  margin: 0 auto;
+  margin-bottom: 1vh;
+  padding: 1vw;
+  text-align: center;
+  color:red;
+  border: 1px solid red;
+  border-radius: 3px;
+}
+.add-input-wrapper {
+  display: flex;
+  align-items: center;
+}
+.add-input {
+  width: 90%;
+  height: 3.5rem;
+  padding: 0 10px;
+  font-size: 1rem;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  color: #38b1fe;
+}
+.add-input:focus {
+  border-color: #38b1fe;
+}
+.add-box {
+  margin: 0 auto;
+  color: lightgrey;
+  font-size: 4rem;
+}
+.add-box:hover {
+  cursor: default;
+  color: lightgrey;
+}
+.button-enable {
+  color: #38b1fe;
+}
+.button-enable:hover {
+  color: grey;
+}
+hr {
+  height: 5px;
+  background-color: #e3f2ff;
+  border: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.dragElem {
+  opacity: 0.5;
+}
+ul {
+  padding-left: 0;
+}
+li {
+  display: flex;
+  list-style: none;
+}
+li p {
+  display: inline-block;
+  margin: auto 1vw;
+}
+.edit-input {
+  padding: 0 10px;
+  font-size: 1rem;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+.save-icon {
+  margin-left: 1vw;
+}
+.delete-icon {
+  margin-left: auto;
+  margin-right: 3vw;
+}

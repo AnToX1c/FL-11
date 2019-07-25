@@ -50,14 +50,16 @@ const showFormattedDate = (inputDate) => {
 const canConvertToDate = (str) => !isNaN(new Date(str));
 
 const daysBetween = (date1, date2) => {
-  const MS_PER_DAY = 86400000;
+  const MILISEC = 1000, SEC = 60, MIN = 60, HOURS = 24;
+  const MS_PER_DAY = MILISEC * SEC * MIN * HOURS;
   const utc1 = Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate());
   const utc2 = Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate());
   return Math.floor(Math.abs(utc2 - utc1) / MS_PER_DAY);
 };
 
 const getAmountOfAdultPeople = (data) => {
-  const DAYS_FOR_ADULT = 6570;
+  const DAYS_PER_YEAR = 365, YEARS = 18;
+  const DAYS_FOR_ADULT = DAYS_PER_YEAR * YEARS;
   const today = new Date();
   return filterArray(data, function(el) {
     return daysBetween(today, new Date(el.birthday)) > DAYS_FOR_ADULT;

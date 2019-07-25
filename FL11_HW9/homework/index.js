@@ -2,8 +2,8 @@ const getNumbers = str => {
   let result = [];
   const arr = str.split('');
   for (let i = 0; i < arr.length; i++) {
-    if (!isNaN(Number(arr[i]))) {
-      result.push(Number(arr[i]));
+    if (!isNaN(parseInt(arr[i]))) {
+      result.push(parseInt(arr[i]));
     }
   }
   return result;
@@ -26,15 +26,15 @@ const executeforEach = (arr, func) => {
 
 const mapArray = (arr, func) => {
   let result = [];
-  executeforEach(arr, function(element){
-      result.push(func(element));
-    });
+  executeforEach(arr, function(element) {
+    result.push(func(element));
+  });
   return result;
 };
 
 const filterArray = (arr, func) => {
   let result = [];
-  executeforEach(arr, function(element){
+  executeforEach(arr, function(element) {
     if (func(element)) {
       result.push(element);
     }

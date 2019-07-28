@@ -6,7 +6,28 @@
   <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <div class="main container visible">
+      <h2>Simple TODO application</h2>
+      <button class="newButton">Add new task</button>
+    </div>
+    <div class="add-new-item container">
+      <h2>Add task</h2>
+      <input class="save-new-input" type="text"/>
+      <button class="cancel">Cancel</button>
+      <button class="save-new">Save changes</button>
+    </div>
+    <div class="modify-item container">
+      <h2>Modify item</h2>
+      <input class="save-modified-input" type="text" value=""/>
+      <button class="cancel">Cancel</button>
+      <button class="save-modified">Save changes</button>
+    </div>
+  </div>
+  <div class="error error-hide">
+    <p><b>Error!</b></p>
+    <p class="error-text"></p>
+  </div>
 
   <script src="./src/app.js"></script>
 </body>

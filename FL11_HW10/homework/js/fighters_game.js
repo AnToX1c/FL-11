@@ -18,7 +18,7 @@ class Fighter {
         defender.dealDamage(damage);
         console.log(`${name} made ${damage} damage to ${defender.getName()}`);
       } else {
-        console.log(`${defender.getName()} attack missed`);
+        console.log(`${name} attack missed`);
       }
     };
     this.dealDamage = hpToReduce => {

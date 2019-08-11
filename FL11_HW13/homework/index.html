@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Homework 13 - CSS Frameworks</title>
+  <script src="./js/jquery-3.2.1.slim.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./styles/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet/less" type="text/css" href="./styles/styles.less" >
+  <script src="./js/less.min.js"></script>
+</head>
+<body>
+  <header class="border-bottom bg-light">
+    <div class="container">
+      <nav class="navbar navbar-expand-md p-0">
+        <a class="navbar-brand" href="#"><img src="./img/logo.png" alt="logo"></a>
+        <button class="navbar-toggler py-0" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav nav-fill">
+            <li class="nav-item active"><a class="nav-link" href="#">Classes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contacts</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h1 class="text-primary border-bottom border-primary py-3">Yoga Pilates</h1>
+      <div class="row py-3">
+        <div class="col-lg-8">
+          <img src="./img/yoga.jpg" alt="yoga exercise" class="img-fluid">
+        </div>
+        <div class="col-lg-4 py-3">
+          <h2 class="text-primary">Class description</h2>
+          <p>This workout uses a series of exercise routines designed to increase your core strength & improve your posture, energy, & flexibility. Pilates work is powered by breath, flow, & centering. By focusing on the mind-body connection & using more efficient form, this workout helps develop a stronger, leaner, healthier body. Appropriate for all fitness levels.</p>
+          <ul>
+            <li>One Personal Trainer</li>
+            <li>Big gym space for training</li>
+            <li>Free tools & props</li>
+            <li>Free locker</li>
+            <li>Free before / after shower</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <h2 class="text-primary border-bottom border-primary py-2">Related classes</h2>
+      <div class="row py-3">
+        <div class="related-class-item bg-red col-6 col-md-3 py-0">
+          <a href="#">
+            <img class="img-fluid" src="./img/cardio-kickbox.jpg" alt="Cardio kickboxing">
+            <p class="py-3">Cardio kickboxing</p>
+          </a>
+        </div>
+        <div class="related-class-item bg-blue col-6 col-md-3 py-0">
+          <a href="#">
+            <img class="img-fluid" src="./img/fitness.jpg" alt="Fitness xpress">
+            <p class="py-3">Fitness xpress</p>
+          </a>
+        </div>
+        <div class="related-class-item bg-orange col-6 col-md-3 py-0">
+          <a href="#">
+            <img class="img-fluid" src="./img/zumba.jpg" alt="Zumba">
+            <p class="py-3">Zumba</p>
+          </a>
+        </div>
+        <div class="related-class-item bg-green col-6 col-md-3 py-0">
+          <a href="#">
+            <img class="img-fluid" src="./img/bootcamp.jpg" alt="Bootcamp">
+            <p class="py-3">Bootcamp</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+        
+  <footer class="container pt-2">
+    <p class="row bg-secondary text-white mx-0 px-3 py-2">&copy; Epam Front-end lab, 2019</p>
+  </footer>
+</body>
+</html>

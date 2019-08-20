@@ -1,8 +1,4 @@
-function Charmander() {
-  this.type = 'Fire';
-  this.specie = 'Lizard Pokémon';
-  this.hasWings = false;
-
+function Pokemon() {
   this.getType = function() {
     return this.type;
   };
@@ -12,6 +8,18 @@ function Charmander() {
   this.canFly = function() {
     return this.hasWings;
   };
+  this.getPokemonType = function() {
+    return this.constructor.name;
+  };
+}
+Pokemon.prototype.constructor = Pokemon;
+
+function Charmander() {
+  Pokemon.call(this);
+  this.type = 'Fire';
+  this.specie = 'Lizard Pokémon';
+  this.hasWings = false;
+
   this.evolve = function() {
     return new Charmeleon();
   }
@@ -38,21 +46,11 @@ Charizard.prototype.constructor = Charizard;
 
 
 function Pichu() {
+  Pokemon.call(this);
   this.type = 'Electric';
   this.specie = 'Mouse Pokémon';
   this.hasWings = false;
-  this.getType = function() {
-    return this.type;
-  };
-  this.getSpecie = function() {
-    return this.specie;
-  };
-  this.getPokemonType = function() {
-    return this.constructor.name;
-  };
-  this.canFly = function() {
-    return this.hasWings;
-  };
+  
   this.evolve = function() {
     return new Pikachu();
   };

@@ -1,0 +1,19 @@
+button {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+  border-radius: 5px;
+  border-width: 0px;
+  height: 50px;
+  width: 100px;
+  cursor: pointer;
+  &:hover {
+    background-color:darken(#5cb85c, 10%);
+  }
+}
+#reset_button {
+  background-color: gray;
+  &:hover {
+    background-color:darken(gray, 10%);
+  }
+}
